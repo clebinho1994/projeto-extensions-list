@@ -9,7 +9,11 @@
   <link rel="stylesheet" href="src/style.css">
 </head>
 <body class="flex justify-center items-center w-full h-full text-[#ededed]">
-  <main class="container flex justify-center items-center flex-col w-[375px]     h-full bg-linear-to-b from-[#040918] to-[#091540]">
+
+  <!-- ---------------- Conteúdo principal - MAIN ---------------- -->
+
+  <main class="container flex justify-center items-center flex-col w-[375px] h-full bg-linear-to-b from-[#040918] to-[#091540]">
+
     <header class="flex justify-between items-center w-[350px] h-[60px] p-3 my-6 bg-[#1f2535] rounded-[10px]">
 
         <div class="logo">
@@ -18,7 +22,7 @@
 
         <div class="dashboard-btn">
 
-          <button class="flex items-center p-3 bg-[#2f354b] rounded-[10px] cursor-pointer"><img src="src/images/icon-sun.svg" alt="" srcset=""></button>
+          <button class="flex items-center p-3 bg-[#2f354b]  rounded-[10px] hover:bg-[#232738] transition cursor-pointer"><img src="src/images/icon-sun.svg" alt="" srcset=""></button>
 
         </div>
     </header>
@@ -29,21 +33,28 @@
 
       <div class="btn-filter flex justify-evenly items-center gap-2 mb-4">
           
-        <button class="btns-filter px-5 py-2 mb-2 bg-[#2f354b] rounded-[25px] cursor-pointer font-semibold text-center text-[18px]">All</button>
+        <button class="btns-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]">All</button>
 
-        <button class="btns-filter px-5 py-2 mb-2 bg-[#2f354b] rounded-[25px] cursor-pointer font-semibold text-center text-[18px]">Active</button>
+        <button class="btns-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]">Active</button>
 
-        <button class="btns-filter px-5 py-2 mb-2 bg-[#2f354b] rounded-[25px] cursor-pointer font-semibold text-center text-[18px]">Inactive</button>
+        <button class="btns-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]">Inactive</button>
 
       </div>
     </section>
+
+    <!-- ---------------- Listas ---------------- -->
     
-      <section class="grid">
+      <section class="list flex justify-center items-center flex-col gap-4">
 
-        <section class="dev-lens flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[#ededed] rounded-[15px] px-3.5">
+        <!-- ---------------- Lista DevLens ---------------- -->
 
-          <div class="flex justify-center items-center dev-lens-info ml-1">
-            <div class="dev-lens-img mb-4"><img src="./src/images/logo-devlens.svg" alt=""></div>
+        <section class="list-dev-lens flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+
+          <div class="flex justify-center items-center ml-1">
+
+            <div class="dev-lens-img mb-4">
+              <img src="./src/images/logo-devlens.svg" alt="logo devlens" width="90px">
+            </div>  
 
             <div class="dev-lens-paragraf flex flex-col justify-center ml-3">
 
@@ -52,20 +63,361 @@
 
             </div>
           </div>
+          
+         <!-- ---------------- Botão REMOVE e Botão Toogle ---------------- -->
 
-          <div class="btn-checked flex justify-between ml-1">
+          <div class="btn-checked flex justify-between items-center ml-1">
 
-              <button class="btn-info bg-[#1f2534] rounded-[25px] py-1 px-3 text-[14px] font-semibold text-center cursor-pointer">Remove</button>
+              <button class="btn-info bg-[#1f2534] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#2f354b] transition py-1.5 px-5 text-[14px] font-semibold cursor-pointer">Remove</button>
 
-              <button class="bg-[#525868] rounded-full w-12 h-6 flex items-center px-1 transition-all" id="toogleBtn" onclick="alternar()" >
+              <button class="bg-[#525868] rounded-full  w-10 h-5.5 flex items-center px-1 transition-all cursor-pointer" id="toogleBtn" onclick="alternar()" >
 
-                <div dir="bolinha" class="bg-[#fffcff] w-5 h-5 rounded-full transition-all"></div>
+                <div dir="bolinha" class="bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
               </button>
           </div>
         </section>
 
-      </section>
+         <!-- ---------------- StyleSpy ---------------- -->
 
+        <section class="list-style-spy flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+
+          <div class="flex justify-center items-center ml-1">
+
+            <div class="dev-lens-img mb-4">
+              <img src="./src/images/logo-style-spy.svg" alt="logo devlens" width="90px">
+            </div>  
+
+            <div class="dev-lens-paragraf flex flex-col justify-center ml-3">
+
+              <h1 class="font-bold mb-1 text-[21px]">StyleSpy</h1>
+            <p class=" text-[14px]">Instantly analyzee and copy CSS from any webpage element.</p>
+
+            </div>
+          </div>
+          
+         <!-- ---------------- Botão REMOVE e Botão Toogle ---------------- -->
+
+          <div class="btn-checked flex justify-between items-center ml-1">
+
+             <button class="btn-info bg-[#1f2534] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#2f354b] transition py-1.5 px-5 text-[14px] font-semibold cursor-pointer">Remove</button>
+
+              <button class="bg-[#525868] rounded-full w-10 h-5.5 flex items-center px-1 transition-all cursor-pointer" id="toogleBtn" onclick="alternar()" >
+
+                <div dir="bolinha" class="bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
+              </button>
+          </div>
+        </section>
+
+          <!-- ---------------- SpeedBoost -------------- -->
+
+        <section class="list-speed-boost flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+
+          <div class="flex justify-center items-center ml-1">
+
+            <div class="dev-lens-img mb-4">
+              <img src="./src/images/logo-speed-boost.svg" alt="logo devlens" width="90px">
+            </div>  
+
+            <div class="dev-lens-paragraf flex flex-col justify-center ml-3">
+
+              <h1 class="font-bold mb-1 text-[21px]">SpeedBoost</h1>
+            <p class=" text-[14px]">Optimizes browser resource usage to accelerate page loading.</p>
+
+            </div>
+          </div>
+          
+         <!-- ---------------- Botão REMOVE e Botão Toogle ---------------- -->
+
+          <div class="btn-checked flex justify-between items-center ml-1">
+
+             <button class="btn-info bg-[#1f2534] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#2f354b] transition py-1.5 px-5 text-[14px] font-semibold cursor-pointer">Remove</button>
+
+              <button class="bg-[#525868] rounded-full w-10 h-5.5 flex items-center px-1 transition-all cursor-pointer" id="toogleBtn" onclick="alternar()" >
+
+                <div dir="bolinha" class="bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
+              </button>
+          </div>
+        </section>
+
+        <!-- ---------------- JsonWizard-------------- -->
+
+        <section class="list-json-wizard flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+
+          <div class="flex justify-center items-center ml-1">
+
+            <div class="dev-lens-img mb-4">
+              <img src="./src/images/logo-json-wizard.svg" alt="logo devlens" width="90px">
+            </div>  
+
+            <div class="dev-lens-paragraf flex flex-col justify-center ml-3">
+
+              <h1 class="font-bold mb-1 text-[21px]">JSONWizard</h1>
+            <p class=" text-[14px]">Formats, validates, and prettifies JSON responses in-browser.</p>
+
+            </div>
+          </div>
+          
+         <!-- ---------------- Botão REMOVE e Botão Toogle ---------------- -->
+
+          <div class="btn-checked flex justify-between items-center ml-1">
+
+             <button class="btn-info bg-[#1f2534] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#2f354b] transition py-1.5 px-5 text-[14px] font-semibold cursor-pointer">Remove</button>
+
+              <button class="bg-[#525868] rounded-full w-10 h-5.5 flex items-center px-1 transition-all cursor-pointer" id="toogleBtn" onclick="alternar()" >
+
+                <div dir="bolinha" class="bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
+              </button>
+          </div>
+        </section>
+
+        <!-- ---------------- Tab Master Pro-------------- -->
+
+        <section class="list-tab-master-pro flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+
+          <div class="flex justify-center items-center ml-1">
+
+            <div class="dev-lens-img mb-4">
+              <img src="./src/images/logo-tab-master-pro.svg" alt="logo devlens" width="75px">
+            </div>  
+
+            <div class="dev-lens-paragraf flex flex-col justify-center ml-3">
+
+              <h1 class="font-bold mb-1 text-[21px]">TabMaster Pro</h1>
+            <p class=" text-[14px]">Organizes browser tabs into groups and sessions.</p>
+
+            </div>
+          </div>
+          
+         <!-- ---------------- Botão REMOVE e Botão Toogle ---------------- -->
+
+          <div class="btn-checked flex justify-between items-center ml-1">
+
+             <button class="btn-info bg-[#1f2534] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#2f354b] transition py-1.5 px-5 text-[14px] font-semibold cursor-pointer">Remove</button>
+
+              <button class="bg-[#525868] rounded-full w-10 h-5.5 flex items-center px-1 transition-all cursor-pointer" id="toogleBtn" onclick="alternar()" >
+
+                <div dir="bolinha" class="bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
+              </button>
+          </div>
+        </section>
+
+        <!-- ---------------- ViewPortBuddy-------------- -->
+
+        <section class="list-view-port flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+
+          <div class="flex justify-center items-center ml-1">
+
+            <div class="dev-lens-img mb-4">
+              <img src="./src/images/logo-viewport-buddy.svg" alt="logo devlens" width="95px">
+            </div>  
+
+            <div class="dev-lens-paragraf flex flex-col justify-center ml-3">
+
+              <h1 class="font-bold mb-1 text-[21px]">ViewportBuddy</h1>
+            <p class=" text-[14px]">Simulates various screen resolutions directly within the browser.</p>
+
+            </div>
+          </div>
+          
+         <!-- ---------------- Botão REMOVE e Botão Toogle ---------------- -->
+
+          <div class="btn-checked flex justify-between items-center ml-1">
+
+             <button class="btn-info bg-[#1f2534] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#2f354b] transition py-1.5 px-5 text-[14px] font-semibold cursor-pointer">Remove</button>
+
+              <button class="bg-[#525868] rounded-full w-10 h-5.5 flex items-center px-1 transition-all cursor-pointer" id="toogleBtn" onclick="alternar()" >
+
+                <div dir="bolinha" class="bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
+              </button>
+          </div>
+        </section>
+
+        <!-- ---------------- Markup Notes-------------- -->
+
+        <section class="list-markup-notes flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+
+          <div class="flex justify-center items-center ml-1">
+
+            <div class="dev-lens-img mb-4">
+              <img src="./src/images/logo-markup-notes.svg" alt="logo devlens" width="122px">
+            </div>  
+
+            <div class="dev-lens-paragraf flex flex-col justify-center ml-3">
+
+              <h1 class="font-bold mb-1 text-[21px]">Markup Notes</h1>
+            <p class=" text-[14px]">Enables annotation and notes directly onto webpages for collaborative debugging</p>
+
+            </div>
+          </div>
+          
+         <!-- ---------------- Botão REMOVE e Botão Toogle ---------------- -->
+
+          <div class="btn-checked flex justify-between items-center ml-1">
+
+             <button class="btn-info bg-[#1f2534] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#2f354b] transition py-1.5 px-5 text-[14px] font-semibold cursor-pointer">Remove</button>
+
+              <button class="bg-[#525868] rounded-full w-10 h-5.5 flex items-center px-1 transition-all cursor-pointer" id="toogleBtn" onclick="alternar()" >
+
+                <div dir="bolinha" class="bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
+              </button>
+          </div>
+        </section>
+
+        <!-- ---------------- GridGuides-------------- -->
+
+        <section class="list-grid-guides flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+
+          <div class="flex justify-center items-center ml-1">
+
+            <div class="dev-lens-img mb-4">
+              <img src="./src/images/logo-grid-guides.svg" alt="logo devlens" width="100px">
+            </div>  
+
+            <div class="dev-lens-paragraf flex flex-col justify-center ml-3">
+
+              <h1 class="font-bold mb-1 text-[21px]">GridGuides</h1>
+            <p class=" text-[14px]">Overlay customizable grids and alignment guides on any webopage.</p>
+
+            </div>
+          </div>
+          
+         <!-- ---------------- Botão REMOVE e Botão Toogle ---------------- -->
+
+          <div class="btn-checked flex justify-between items-center ml-1">
+
+             <button class="btn-info bg-[#1f2534] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#2f354b] transition py-1.5 px-5 text-[14px] font-semibold cursor-pointer">Remove</button>
+
+              <button class="bg-[#525868] rounded-full w-10 h-5.5 flex items-center px-1 transition-all cursor-pointer" id="toogleBtn" onclick="alternar()" >
+
+                <div dir="bolinha" class="bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
+              </button>
+          </div>
+        </section>
+
+         <!-- ---------------- Palette Picker-------------- -->
+
+        <section class="list-palette-picker flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+
+          <div class="flex justify-center items-center ml-1">
+
+            <div class="dev-lens-img mb-4">
+              <img src="./src/images/logo-palette-picker.svg" alt="logo devlens" width="75px">
+            </div>  
+
+            <div class="dev-lens-paragraf flex flex-col justify-center ml-3">
+
+              <h1 class="font-bold mb-1 text-[21px]">Palette Picker</h1>
+            <p class=" text-[14px]">Instantly extracts color palettes from any webpage</p>
+
+            </div>
+          </div>
+          
+         <!-- ---------------- Botão REMOVE e Botão Toogle ---------------- -->
+
+          <div class="btn-checked flex justify-between items-center ml-1">
+
+             <button class="btn-info bg-[#1f2534] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#2f354b] transition py-1.5 px-5 text-[14px] font-semibold cursor-pointer">Remove</button>
+
+              <button class="bg-[#525868] rounded-full w-10 h-5.5 flex items-center px-1 transition-all cursor-pointer" id="toogleBtn" onclick="alternar()" >
+
+                <div dir="bolinha" class="bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
+              </button>
+          </div>
+        </section>
+
+        <!-- ---------------- LinkChecker-------------- -->
+
+        <section class="list-link-checker flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+
+          <div class="flex items-center ml-1">
+
+            <div class="dev-lens-img mb-4">
+              <img src="./src/images/logo-link-checker.svg" alt="logo devlens" width="70px">
+            </div>  
+
+            <div class="dev-lens-paragraf flex flex-col justify-center ml-3">
+
+              <h1 class="font-bold mb-1 text-[21px]">LinkChecker</h1>
+            <p class=" text-[14px]">Scans and highlights broken links on any page.</p>
+
+            </div>
+          </div>
+          
+         <!-- ---------------- Botão REMOVE e Botão Toogle ---------------- -->
+
+          <div class="btn-checked flex justify-between items-center ml-1">
+
+             <button class="btn-info bg-[#1f2534] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#2f354b] transition py-1.5 px-5 text-[14px] font-semibold cursor-pointer">Remove</button>
+
+              <button class="bg-[#525868] rounded-full w-10 h-5.5 flex items-center px-1 transition-all cursor-pointer" id="toogleBtn" onclick="alternar()" >
+
+                <div dir="bolinha" class="bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
+              </button>
+          </div>
+        </section>
+
+        <!-- ---------------- DOM snapshot-------------- -->
+
+        <section class="list-dom flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+
+          <div class="flex items-center ml-1">
+
+            <div class="dev-lens-img mb-4">
+              <img src="./src/images/logo-dom-snapshot.svg" alt="logo devlens" width="68px">
+            </div>  
+
+            <div class="dev-lens-paragraf flex flex-col justify-center ml-3">
+
+              <h1 class="font-bold mb-1 text-[21px]">DOM Snapshot</h1>
+            <p class=" text-[14px]">Capture and export DOM structures quickly.</p>
+
+            </div>
+          </div>
+          
+         <!-- ---------------- Botão REMOVE e Botão Toogle ---------------- -->
+
+          <div class="btn-checked flex justify-between items-center ml-1">
+
+             <button class="btn-info bg-[#1f2534] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#2f354b] transition py-1.5 px-5 text-[14px] font-semibold cursor-pointer">Remove</button>
+
+              <button class="bg-[#525868] rounded-full w-10 h-5.5 flex items-center px-1 transition-all cursor-pointer" id="toogleBtn" onclick="alternar()" >
+
+                <div dir="bolinha" class="bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
+              </button>
+          </div>
+        </section>
+
+        <!-- ---------------- ConsolePlus-------------- -->
+
+        <section class="list-console-plus flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+
+          <div class="flex items-center ml-1">
+
+            <div class="dev-lens-img mb-4">
+              <img src="./src/images/logo-console-plus.svg" alt="logo devlens" width="95px">
+            </div>  
+
+            <div class="dev-lens-paragraf flex flex-col justify-center ml-3">
+
+              <h1 class="font-bold mb-1 text-[21px]">ConsolePlus</h1>
+            <p class=" text-[14px]">Enhanced developer console with advanced filtering and logging.</p>
+
+            </div>
+          </div>
+          
+         <!-- ---------------- Botão REMOVE e Botão Toogle ---------------- -->
+
+          <div class="btn-checked flex justify-between items-center ml-1">
+
+             <button class="btn-info bg-[#1f2534] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#2f354b] transition py-1.5 px-5 text-[14px] font-semibold cursor-pointer">Remove</button>
+
+              <button class="bg-[#525868] rounded-full w-10 h-5.5 flex items-center px-1 transition-all cursor-pointer" id="toogleBtn" onclick="alternar()" >
+
+                <div dir="bolinha" class="bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
+              </button>
+          </div>
+        </section>
+      </section>
   </main>
 </body>
 </html>

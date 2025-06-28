@@ -14,3 +14,6 @@ estarei utilizando HTML, CSS/Tailwind e Javascript.
 - Deixei os botões "Toogle" funcionais.
 - Parte da estrutura HTML finalizada.
 - Próximo passo é estilizar para os demais dispositivos.
+
+28/06
+- Dando continuidade ao projeto.

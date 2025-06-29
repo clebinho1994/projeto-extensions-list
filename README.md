@@ -15,5 +15,7 @@ estarei utilizando HTML, CSS/Tailwind e Javascript.
 - Parte da estrutura HTML finalizada.
 - Próximo passo é estilizar para os demais dispositivos.
 
-28/06
-- Dando continuidade ao projeto.
+29/06
+- Extensions list já está funcionando de forma responsiva
+- Botões ALL, ACTIVE e Inactive estão préviamente funcionando.
+- Proximo passo será fazer que os filtros funcionem e o botão de remover.

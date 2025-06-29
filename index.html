@@ -10,13 +10,14 @@
   <link rel="stylesheet" href="src/style.css">
 </head>
 
-<body class="flex justify-center items-center w-full h-full text-[#ededed]">
+<body class="text-[#ededed]">
 
   <!-- ---------------- Conteúdo principal - MAIN ---------------- -->
 
-  <main class="container flex justify-center items-center flex-col w-[375px] h-full bg-linear-to-b from-[#040918] to-[#091540]">
+  <main class="flex justify-center items-center flex-col bg-linear-to-b from-[#040918] to-[#091540]">
 
-    <header class="flex justify-between items-center w-[350px] h-[60px] p-3 my-6 bg-[#1f2535] rounded-[10px]">
+    <header class="xl:w-[1082px] lg:w-[716px] md:w-[716px] flex justify-between items-center p-3 my-6 bg-[#1f2535] rounded-[10px]
+    ">
 
       <div class="logo">
         <img src="src/images/logo-white.svg" alt="">
@@ -29,28 +30,28 @@
       </div>
     </header>
 
-    <section class="h1-filter flex justify-center items-center flex-col gap-1.5">
+    <section class="xl:flex xl:justify-between xl:flex-row xl:items-center xl:w-[1076px] lg:w-[710px] lg:flex lg:justify-between lg:items-center lg:flex-row md:flex md:items-center md:flex-row md:justify-between md:w-[710px] filter flex justify-center items-center flex-col gap-1.5">
+      <div>
+        <h1 class="font-bold text-3xl mb-4">Extensions List</h1>
+      </div>
+      <div class="btns-filter flex justify-evenly items-center gap-2 mb-4" id="btn-filter">
 
-      <h1 class="font-bold text-3xl mb-4">Extensions List</h1>
+        <button class="ativado btn-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]" id="btn-all" data-filter="all">All</button>
 
-      <div class="btn-filter flex justify-evenly items-center gap-2 mb-4">
+        <button  class="btn-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]" id="btn-active" data-filter="active">Active</button>
 
-        <button class="btns-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]">All</button>
-
-        <button class="btns-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]">Active</button>
-
-        <button class="btns-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]">Inactive</button>
+        <button class="btn-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]" id="btn-inactive" data-filter="inactive">Inactive</button>
 
       </div>
     </section>
 
     <!-- ---------------- Listas ---------------- -->
 
-    <section class="list flex justify-center items-center flex-col gap-4">
+    <section class="xl:grid xl:grid-cols-3 md:grid md:grid-cols-2 list flex justify-center items-center flex-col gap-4 mb-3">
 
       <!-- ---------------- Lista DevLens ---------------- -->
 
-      <section class="list-dev-lens flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+      <section class="list-dev-lens flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -81,7 +82,7 @@
 
       <!-- ---------------- StyleSpy ---------------- -->
 
-      <section class="list-style-spy flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+      <section class="list-style-spy flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -112,7 +113,7 @@
 
       <!-- ---------------- SpeedBoost -------------- -->
 
-      <section class="list-speed-boost flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+      <section class="list-speed-boost flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -143,7 +144,7 @@
 
       <!-- ---------------- JsonWizard-------------- -->
 
-      <section class="list-json-wizard flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+      <section class="list-json-wizard flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -174,7 +175,7 @@
 
       <!-- ---------------- Tab Master Pro-------------- -->
 
-      <section class="list-tab-master-pro flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+      <section class="list-tab-master-pro flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -205,7 +206,7 @@
 
       <!-- ---------------- ViewPortBuddy-------------- -->
 
-      <section class="list-view-port flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+      <section class="list-view-port flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -236,7 +237,7 @@
 
       <!-- ---------------- Markup Notes-------------- -->
 
-      <section class="list-markup-notes flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+      <section class="list-markup-notes flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -267,7 +268,7 @@
 
       <!-- ---------------- GridGuides-------------- -->
 
-      <section class="list-grid-guides flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+      <section class="list-grid-guides flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -298,7 +299,7 @@
 
       <!-- ---------------- Palette Picker-------------- -->
 
-      <section class="list-palette-picker flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+      <section class="list-palette-picker flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -329,7 +330,7 @@
 
       <!-- ---------------- LinkChecker-------------- -->
 
-      <section class="list-link-checker flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+      <section class="list-link-checker flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex items-center ml-1">
 
@@ -360,7 +361,7 @@
 
       <!-- ---------------- DOM snapshot-------------- -->
 
-      <section class="list-dom flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+      <section class="list-dom flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex items-center ml-1">
 
@@ -391,7 +392,7 @@
 
       <!-- ---------------- ConsolePlus-------------- -->
 
-      <section class="list-console-plus flex flex-col justify-around bg-[#2f354b] w-[350px] h-[180px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5">
+      <section class="list-console-plus flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5 " data-status="active">
 
         <div class="flex items-center ml-1">
 

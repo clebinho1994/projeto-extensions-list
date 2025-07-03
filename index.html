@@ -14,7 +14,7 @@
 
   <!-- ---------------- Conteúdo principal - MAIN ---------------- -->
 
-  <main class="flex justify-center items-center flex-col bg-linear-to-b from-[#040918] to-[#091540]">
+  <main class="min-h-screen flex justify-start items-center flex-col bg-linear-to-b from-[#040918] to-[#091540]">
 
     <header class="xl:w-[1082px] lg:w-[716px] md:w-[716px] flex justify-between items-center p-3 my-6 bg-[#1f2535] rounded-[10px]
     ">
@@ -36,22 +36,22 @@
       </div>
       <div class="btns-filter flex justify-evenly items-center gap-2 mb-4" id="btn-filter">
 
-        <button class="ativado btn-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]" id="btn-all" data-filter="all">All</button>
+        <button class="ativado btn-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]" id="btn-all" data-filter="all" onclick="filtrar('all')">All</button>
 
-        <button  class="btn-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]" id="btn-active" data-filter="active">Active</button>
+        <button  class="btn-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]" id="btn-active" data-filter="active" onclick="filtrar('active')">Active</button>
 
-        <button class="btn-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]" id="btn-inactive" data-filter="inactive">Inactive</button>
+        <button class="btn-filter px-5 py-2 mb-2 bg-[#2f354b] border border-[rgba(204,204,204,0.3)] rounded-[25px] hover:bg-[#232738] transition cursor-pointer font-semibold text-center text-[18px]" id="btn-inactive" data-filter="inactive" onclick="filtrar('inactive')">Inactive</button>
 
       </div>
     </section>
 
     <!-- ---------------- Listas ---------------- -->
 
-    <section class="xl:grid xl:grid-cols-3 md:grid md:grid-cols-2 list flex justify-center items-center flex-col gap-4 mb-3">
+    <ul class="xl:grid xl:grid-cols-3 md:grid md:grid-cols-2 list flex justify-center items-center flex-col gap-4 mb-3">
 
       <!-- ---------------- Lista DevLens ---------------- -->
 
-      <section class="list-dev-lens flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
+      <li class="list-dev-lens flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -78,11 +78,11 @@
             <div class="bolinha bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
           </button>
         </div>
-      </section>
+      </li>
 
       <!-- ---------------- StyleSpy ---------------- -->
 
-      <section class="list-style-spy flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
+      <li class="list-style-spy flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -109,11 +109,11 @@
             <div class="bolinha bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
           </button>
         </div>
-      </section>
+      </li>
 
       <!-- ---------------- SpeedBoost -------------- -->
 
-      <section class="list-speed-boost flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
+      <li class="list-speed-boost flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -140,11 +140,11 @@
             <div class="bolinha bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
           </button>
         </div>
-      </section>
+      </li>
 
       <!-- ---------------- JsonWizard-------------- -->
 
-      <section class="list-json-wizard flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
+      <li class="list-json-wizard flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -171,11 +171,11 @@
             <div class="bolinha bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
           </button>
         </div>
-      </section>
+      </li>
 
       <!-- ---------------- Tab Master Pro-------------- -->
 
-      <section class="list-tab-master-pro flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
+      <li class="list-tab-master-pro flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -202,11 +202,11 @@
             <div class="bolinha bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
           </button>
         </div>
-      </section>
+      </li>
 
       <!-- ---------------- ViewPortBuddy-------------- -->
 
-      <section class="list-view-port flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
+      <li class="list-view-port flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -233,11 +233,11 @@
             <div class="bolinha bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
           </button>
         </div>
-      </section>
+      </li>
 
       <!-- ---------------- Markup Notes-------------- -->
 
-      <section class="list-markup-notes flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
+      <li class="list-markup-notes flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -264,11 +264,11 @@
             <div class="bolinha bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
           </button>
         </div>
-      </section>
+      </li>
 
       <!-- ---------------- GridGuides-------------- -->
 
-      <section class="list-grid-guides flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
+      <li class="list-grid-guides flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -295,11 +295,11 @@
             <div class="bolinha bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
           </button>
         </div>
-      </section>
+      </li>
 
       <!-- ---------------- Palette Picker-------------- -->
 
-      <section class="list-palette-picker flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
+      <li class="list-palette-picker flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex justify-center items-center ml-1">
 
@@ -326,11 +326,11 @@
             <div class="bolinha bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
           </button>
         </div>
-      </section>
+      </li>
 
       <!-- ---------------- LinkChecker-------------- -->
 
-      <section class="list-link-checker flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
+      <li class="list-link-checker flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex items-center ml-1">
 
@@ -357,11 +357,11 @@
             <div class="bolinha bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
           </button>
         </div>
-      </section>
+      </li>
 
       <!-- ---------------- DOM snapshot-------------- -->
 
-      <section class="list-dom flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
+      <li class="list-dom flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5" data-status="active">
 
         <div class="flex items-center ml-1">
 
@@ -388,11 +388,11 @@
             <div class="bolinha bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
           </button>
         </div>
-      </section>
+      </li>
 
       <!-- ---------------- ConsolePlus-------------- -->
 
-      <section class="list-console-plus flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5 " data-status="active">
+      <li class="list-console-plus flex flex-col justify-around bg-[#2f354b] w-[350px] h-[200px] border border-[rgba(204,204,204,0.3)] rounded-[15px] px-3.5 " data-status="active">
 
         <div class="flex items-center ml-1">
 
@@ -419,8 +419,8 @@
             <div class="bolinha bg-[#fffcff] w-4 h-4 rounded-full transition-all"></div>
           </button>
         </div>
-      </section>
-    </section>
+      </li>
+    </ul>
   </main>
   <script src="./src/main.js"></script>
 </body>

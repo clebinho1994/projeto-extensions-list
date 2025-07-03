@@ -1,49 +1,76 @@
 
-const filterBtn = document.getElementById('btn-filter');
+const filterButtons = document.querySelectorAll('.btn-filter');
 
-filterBtn.addEventListener('click', (e) => {
-  if(e.target.classList.contains('btn-filter')) {
-    document.querySelectorAll('.btn-filter').forEach(btn => btn.classList.remove('ativado'));
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', (e) => {
+   
+    filterButtons.forEach(btn => btn.classList.remove('ativado'));
+    
     e.target.classList.add('ativado');
-  }
+    
+   
+    const filterValue = e.target.getAttribute('data-filter');
+    console.log('Filtro selecionado:', filterValue); 
+    filtrar(filterValue);
+  });
 });
 
-
-
-// Botão para marcar e desmarcar a Extensão
+// Função para alternar o estado do botão de toggle
 function alternar(botao) {
-
-  const sectionCards = botao.closest('section');
+  const card = botao.closest('li');
   const bola = botao.querySelector('.bolinha');
   const ligado = botao.classList.contains('bg-[#525868]');
 
-  if(ligado) {
-    botao.classList.remove("bg-[#525868]");
-    botao.classList.add("bg-[#f15c52]");
+  if (ligado) {
+    botao.classList.remove('bg-[#525868]');
+    botao.classList.add('bg-[#f15c52]');
     bola.classList.add('translate-x-4');
-
-    sectionCards.classList.remove('inactive');
-    sectionCards.classList.add('active');
-    
+    card.setAttribute('data-status', 'inactive');
   } else {
-    botao.classList.remove("bg-[#f15c52]");
-    botao.classList.add("bg-[#525868]");
-    botao.classList.remove('active');
+    botao.classList.remove('bg-[#f15c52]');
+    botao.classList.add('bg-[#525868]');
     bola.classList.remove('translate-x-4');
-
-    sectionCards.classList.remove('active');
-    sectionCards.classList.add('inactive');
+    card.setAttribute('data-status', 'active');
   }
-};
 
-const filterActive = () => {
-  const sections = document.querySelectorAll('[data-status');
-  sections.forEach(section => {
-    if(section.classList.contains('active')) {
-      section.style.display = '';
-    } else {
-      section.style.display = 'none';
-    }
-  })
+  // Reaplica o filtro ativo
+  const activeFilter = document.querySelector('.btn-filter.ativado').getAttribute('data-filter');
+  console.log('Reaplicando filtro:', activeFilter);
+  filtrar(activeFilter);
 }
 
+// Função para filtrar os cards
+function filtrar(status) {
+  const cards = document.querySelectorAll('ul.list > li');
+
+  cards.forEach(card => {
+    const estado = card.getAttribute('data-status');
+    console.log('Card estado:', estado);
+
+    if (status === 'all') {
+      card.style.display = 'flex'; 
+    } else {
+      card.style.display = estado === status ? 'none' : 'flex'; 
+    }
+  });
+}
+
+// Inicializa o estado visual dos botões de toggle e aplica o filtro inicial
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('ul.list > li');
+  cards.forEach(card => {
+    const botao = card.querySelector('.btn-bolinha');
+    const bola = botao.querySelector('.bolinha');
+    const estado = card.getAttribute('data-status');
+
+    if (estado === 'inactive') {
+      botao.classList.remove('bg-[#525868]');
+      botao.classList.add('bg-[#f15c52]');
+      bola.classList.add('translate-x-4');
+    }
+  });
+
+  // Aplica o filtro inicial (all)
+  filtrar('all');
+});

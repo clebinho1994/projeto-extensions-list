@@ -71,6 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Aplica o filtro inicial (all)
+  // Aplica o filtro inicial (all) todos/
   filtrar('all');
 });

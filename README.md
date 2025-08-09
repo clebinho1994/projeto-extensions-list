@@ -19,3 +19,7 @@ estarei utilizando HTML, CSS/Tailwind e Javascript.
 - Extensions list já está funcionando de forma responsiva
 - Botões ALL, ACTIVE e Inactive estão préviamente funcionando.
 - Proximo passo será fazer que os filtros funcionem e o botão de remover.
+
+09/08
+
+Projeto finalizado, com todos os filtros funcionando.

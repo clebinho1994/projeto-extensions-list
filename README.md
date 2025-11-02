@@ -20,6 +20,5 @@ estarei utilizando HTML, CSS/Tailwind e Javascript.
 - Botões ALL, ACTIVE e Inactive estão préviamente funcionando.
 - Proximo passo será fazer que os filtros funcionem e o botão de remover.
 
-09/08
-
-Projeto finalizado, com todos os filtros funcionando.
+02/11
+- Falta deixar o button (REMOVE) funcional e a opção de temas Dark ou Light
